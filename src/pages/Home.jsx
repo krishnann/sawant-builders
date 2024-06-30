@@ -270,7 +270,6 @@ const Home = () => {
                 contribute positively to the communities we serve.
               </p>
               <p>
-                {" "}
                 Our dedication to sustainable practices ensures that our
                 developments are not only beautiful but also environmentally
                 responsible. Together, we build futures, one home at a time.

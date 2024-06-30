@@ -7,7 +7,7 @@ function Footer() {
         <div className="row row-cols-1 row-cols-md-4">
           <div className="col col-md-2">
             <img
-              src="src\assets\style-images\logo.png"
+              src="/style-images/logo.png"
               alt="logo"
               className="mb-15 mb-md-0"
             />
