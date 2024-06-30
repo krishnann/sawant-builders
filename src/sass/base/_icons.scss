@@ -1,0 +1,33 @@
+// Generic Icons Styling
+%generic-icon-styling {
+    color: $white;
+    @include font-size(24px);
+    font-weight: 800;
+    font-family: "Font Awesome 5 Free";
+}
+
+.address-icon:before {
+    content: '\f3c5';
+    @extend %generic-icon-styling;
+}
+
+.contact-icon:before {
+    content: '\f095';
+    @extend %generic-icon-styling;
+}
+
+.visiting-open-icon:before {
+    content: '\f52b';
+    @extend %generic-icon-styling;
+}
+
+.fa-comment{
+    @include font-size(50px);
+}
+
+// Social media icons
+.facebook-icon:before {
+    content: '\f39e';
+    font-family: "Font Awesome 5 Free";
+    // @extend %generic-icon-styling;
+}

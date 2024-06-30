@@ -1,0 +1,38 @@
+html {
+  position: relative;
+  letter-spacing: 1px;
+}
+
+body {
+  line-height: 1.25;
+  @include font-size(15px);
+  // font-family: "Kanit", sans-serif;
+  // font-family: "Inter", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  z-index: 99;
+  @include font-size(18px);
+  border: none;
+  outline: none;
+  background-color: $brand-primary;
+  color: $white;
+  cursor: pointer;
+  padding: 10px 0;
+  border-radius: 30px;
+}
+
+.img-fluid{
+  border-radius: 4px;
+}
+
+.about-us{
+  padding-top: 70px;
+}

@@ -1,0 +1,76 @@
+label {
+  @include font-size(16px);
+  color: $brand-primary;
+}
+
+.form-control, .form-select {
+  color: $gray-100;
+  border-radius: 4px;
+  font-weight: 500;
+  min-height: 48px;
+  border: 1px solid $brand-primary;
+  background-color: $white;
+  &:focus {
+    @extend .form-control;
+  }
+  &::placeholder {
+    color: $brand-primary;
+  }
+
+  &:focus {
+    @extend .form-control;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $brand-secondary;
+  }
+}
+
+textarea.form-control{
+min-height: 150px;
+}
+
+// .search-field-form {
+//   max-width: 300px;
+//   margin: auto;
+//   @include media-breakpoint-up(md) {
+//     margin: 0 0 0 auto;
+//   }
+
+//   .form-control {
+//     padding-left: 30px;
+//   }
+
+//   &:before {
+//     font-family: "Font Awesome 5 Free";
+//     content: "\f002";
+//     display: inline-block;
+//     padding-right: 3px;
+//     vertical-align: middle;
+//     font-weight: 900;
+//     position: absolute;
+//     top: 29%;
+//     @include media-breakpoint-up(md) {
+//       top: 50%;
+//     }
+//     transform: translateY(-50%);
+//     color: $brand-primary;
+//     margin-left: 10px;
+//   }
+// }
+
+select {
+  color: $brand-primary;
+  border-radius: 20px;
+  font-weight: 500;
+  background-color: $brand-secondary;
+}
+
+.error {
+  color: red;
+}
+
+.formFooter {
+  display: none !important;
+}

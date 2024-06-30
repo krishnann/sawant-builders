@@ -1,0 +1,168 @@
+.navbar {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  .nav-link {
+    position: relative;
+    color: $brand-primary;
+    text-transform: uppercase;
+    @include font-size(16px);
+
+    &.active,
+    &:hover {
+      color: $brand-secondary;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      //   margin-right: 0;//use utility
+      //   @include media-breakpoint-up(lg){
+      //   margin-right: 15px;
+      // }
+      border-bottom: 1px solid $brand-secondary;
+
+      &:last-child {
+        margin-right: 0 !important;
+      }
+
+      /* Top and Bottom borders go out */
+      @include media-breakpoint-up(lg) {
+        border: 0;
+
+        .nav-link:before,
+        .nav-link:after {
+          position: absolute;
+          left: 0px;
+          width: 100%;
+          height: 2px;
+          background: $brand-secondary;
+          content: "";
+          opacity: 0;
+          transition: all 0.3s;
+        }
+
+        .nav-link:before {
+          top: 0px;
+          transform: translateY(10px);
+        }
+
+        .nav-link:after {
+          bottom: 0px;
+          transform: translateY(-10px);
+        }
+
+        .nav-link.active:before,
+        .nav-link.active:after,
+        .nav-link:hover:before,
+        .nav-link:hover:after {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    }
+
+  }
+
+  %hamburger-bars-styling {
+    width: 35px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $brand-secondary;
+  }
+
+  //Hamburger css start
+  .navbar-toggler {
+    border: 0;
+    box-shadow: none;
+
+    .hamburger-box {
+      width: 35px;
+      height: 29px;
+
+      .hamburger-inner {
+        top: 2px;
+        @extend %hamburger-bars-styling;
+        transition: background-color 0s linear 0.12s;
+
+        &:before,
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          @extend %hamburger-bars-styling;
+        }
+
+        &:before {
+          top: 12px;
+          transition:
+            top 0.1s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+            transform 0.13s cubic-bezier(0.5, 0.05, 0.67, 0.19),
+            -webkit-transform 0.13s cubic-bezier(0.5, 0.05, 0.67, 0.19);
+        }
+
+        &:after {
+          top: 24px;
+          transition:
+            top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+            transform 0.13s cubic-bezier(0.5, 0.05, 0.67, 0.19),
+            -webkit-transform 0.13s cubic-bezier(0.5, 0.05, 0.67, 0.19);
+        }
+      }
+    }
+
+    //Hamburger open state css start
+    &.open {
+      .hamburger-inner {
+        &:before {
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+          transition:
+            top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.15s,
+            transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s,
+            -webkit-transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
+        }
+
+        &:after {
+          transform: translate3d(0, 10px, 0) rotate(-45deg);
+          transition:
+            top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+            transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s,
+            -webkit-transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
+        }
+
+        &:before,
+        &:after {
+          top: 0;
+        }
+
+        background-color: transparent;
+      }
+    }
+
+    //Hamburger open state css end
+    &:focus {
+      outline: none;
+    }
+  }
+
+  //Hamburger css end
+
+  .navbar-collapse {
+    opacity: 0.95;
+
+    @include media-breakpoint-up(lg) {
+      opacity: 1;
+      justify-content: end;
+    }
+
+    @include media-breakpoint-down(lg) {
+      position: fixed;
+      overflow: auto;
+      height: 100vh !important;
+      left: 0;
+      width: 100%;
+      transition: none;
+      padding-bottom: 150px;
+      background-color: $white;
+    }
+  }
+}

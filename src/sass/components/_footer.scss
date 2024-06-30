@@ -1,0 +1,39 @@
+footer {
+  color: $black;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 20px 0 0;
+  background-color: $white;
+  border-top: 2px solid $brand-primary;
+  p{
+    line-height: 1.25;
+  }
+
+  a{
+    color:$gray-100;
+    text-decoration: none;
+  }
+
+  .nav-item {
+    .nav-link {
+      @extend .link;
+      margin-right: 20px;
+    }
+
+    &:last-child {
+      .nav-link {
+        margin-right: 0;
+      }
+    }
+  }
+
+    .copyright-content {
+      color: $white;
+      min-height: 40px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      background-color: $brand-secondary;
+  }
+}

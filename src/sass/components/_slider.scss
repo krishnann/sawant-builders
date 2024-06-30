@@ -1,0 +1,66 @@
+// Slick slider css
+
+.slick-slide{
+    .card{
+      padding: 15px;
+      min-height: 200px;
+      box-shadow: none;
+      background-color: $gray-50;
+      border: 1px solid $brand-secondary;
+      h5{
+        @include font-size(16px);
+      }
+    }
+  }
+  
+  .slick-initialized .slick-slide > div {
+    margin: 0 5px;
+  }
+  
+  .slick-dots {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin: 25px 0;
+    li{
+      button:before{
+        @include font-size(15px);
+        color: $brand-secondary;
+      }
+  
+      &.slick-active button:before{
+        color: $brand-secondary;
+      }
+    }
+  }
+  
+  .slick-next:before, .slick-prev:before{
+    color: $brand-secondary;
+  }
+  
+  .slick-prev {
+    left: -10px;
+    @include media-breakpoint-up(md){
+    left: -25px;
+  }
+    z-index: 5;
+    &:hover, &:focus{
+      @extend .slick-next;
+    }
+  }
+  
+  .slick-next {
+    right: -10px;
+    @include media-breakpoint-up(md){
+    right: -25px;
+  }
+    z-index: 5;
+  
+    &:hover, &:focus{
+      @extend .slick-next
+    }
+  }
+  
+  .slick-next, .slick-prev{
+  top: 40%;
+  }

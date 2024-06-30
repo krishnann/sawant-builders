@@ -1,0 +1,713 @@
+// /* VARIABLES */
+
+// /* HELPERS */
+$black: #000;
+$white: #fff;
+
+// custom colors
+$gray-50: #f5f5f5;
+$gray-100: #34495E;
+$brand-primary: #029de0;
+$brand-secondary: #c73c29;
+
+// Font Family
+$alumni: "Alumni Sans", sans-serif;
+
+// /* background Colors */
+$bg-color: (
+  black: $black,
+  white: $white,
+  gray-100: $gray-100,
+  secondary: $brand-secondary,
+  primary: $brand-primary
+);
+
+// $theme-colors: (
+//   "green": $green-100
+// );
+
+// /* Text Colors */
+$text-color: (
+  black: $black,
+  white: $white,
+  secondary: $brand-secondary,
+  primary: $brand-primary
+);
+
+// /* Underline Colors */
+// $underline-color: (
+//   black: $black
+// );
+
+// // Fonts
+// // Font, line-height, and color for body text, headings, and more.
+// //base font size
+$font-size-base: 16px;
+
+// // Default margin
+$margin: () !default;
+$margin: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin
+);
+
+$margin-top: () !default;
+$margin-top: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px,
+    30: 30px,
+    35: 35px
+  ),
+  $margin-top
+);
+
+$margin-left: () !default;
+$margin-left: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-left
+);
+
+$margin-bottom: () !default;
+$margin-bottom: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px,
+    40: 40px,
+    60: 60px
+  ),
+  $margin-bottom
+);
+
+$margin-right: () !default;
+$margin-right: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-right
+);
+
+// // Small devices margin (landscape phones, 576px and up)
+$margin-sm: () !default;
+$margin-sm: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-sm
+);
+
+$margin-sm-top: () !default;
+$margin-sm-top: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-sm-top
+);
+
+$margin-sm-left: () !default;
+$margin-sm-left: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-sm-left
+);
+
+$margin-sm-bottom: () !default;
+$margin-sm-bottom: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-sm-bottom
+);
+
+$margin-sm-right: () !default;
+$margin-sm-right: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-sm-right
+);
+
+// Medium devices margin  (tablets, 768px and up)
+$margin-md: () !default;
+$margin-md: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-md
+);
+
+$margin-md-top: () !default;
+$margin-md-top: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-md-top
+);
+
+$margin-md-left: () !default;
+$margin-md-left: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-md-left
+);
+
+$margin-md-bottom: () !default;
+$margin-md-bottom: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-md-bottom
+);
+
+$margin-md-right: () !default;
+$margin-md-right: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-md-left
+);
+
+// Large devices margin (desktops, 992px and up)
+$margin-lg: () !default;
+$margin-lg: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-lg
+);
+
+$margin-lg-top: () !default;
+$margin-lg-top: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-lg-top
+);
+
+$margin-lg-left: () !default;
+$margin-lg-left: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-lg-left
+);
+
+$margin-lg-bottom: () !default;
+$margin-lg-bottom: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-lg-bottom
+);
+
+$margin-lg-right: () !default;
+$margin-lg-right: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-lg-right
+);
+
+// Extra large devices margin (large desktops, 1200px and up)
+$margin-xl: () !default;
+$margin-xl: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-xl
+);
+
+$margin-xl-top: () !default;
+$margin-xl-top: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-xl-top
+);
+
+$margin-xl-left: () !default;
+$margin-xl-left: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-xl-left
+);
+
+$margin-xl-bottom: () !default;
+$margin-xl-bottom: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-xl-bottom
+);
+
+$margin-xl-right: () !default;
+$margin-xl-right: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $margin-xl-right
+);
+
+// Spacing Padding
+// You can add more entries to the $spacers map, should you need more variation.
+// Default $padding
+$padding: () !default;
+$padding: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding
+);
+
+$padding-top: () !default;
+$padding-top: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-top
+);
+
+$padding-left: () !default;
+$padding-left: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px,
+    40: 40px
+  ),
+  $padding-left
+);
+
+$padding-bottom: () !default;
+$padding-bottom: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-bottom
+);
+
+$padding-right: () !default;
+$padding-right: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px,
+    40: 40px
+  ),
+  $padding-right
+);
+
+// Small devices Padding (landscape phones, 576px and up)
+$padding-sm: () !default;
+$padding-sm: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-sm
+);
+
+$padding-sm-top: () !default;
+$padding-sm-top: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-sm-top
+);
+
+$padding-sm-left: () !default;
+$padding-sm-left: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-sm-left
+);
+
+$padding-sm-bottom: () !default;
+$padding-sm-bottom: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-sm-bottom
+);
+
+$padding-sm-right: () !default;
+$padding-sm-right: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-sm-right
+);
+
+// Medium devices Padding  (tablets, 768px and up)
+$padding-md: () !default;
+$padding-md: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-md
+);
+
+$padding-md-top: () !default;
+$padding-md-top: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-md-top
+);
+
+$padding-md-left: () !default;
+$padding-md-left: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-md-left
+);
+
+$padding-md-bottom: () !default;
+$padding-md-bottom: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-md-bottom
+);
+
+$padding-md-right: () !default;
+$padding-md-right: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-md-left
+);
+
+// Large devices Padding (desktops, 992px and up)
+$padding-lg: () !default;
+$padding-lg: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-lg
+);
+
+$padding-lg-top: () !default;
+$padding-lg-top: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-lg-top
+);
+
+$padding-lg-left: () !default;
+$padding-lg-left: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-lg-left
+);
+
+$padding-lg-bottom: () !default;
+$padding-lg-bottom: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-lg-bottom
+);
+
+$padding-lg-right: () !default;
+$padding-lg-right: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-lg-right
+);
+
+// Extra large devices Padding (large desktops, 1200px and up)
+$padding-xl: () !default;
+$padding-xl: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-xl
+);
+
+$padding-xl-top: () !default;
+$padding-xl-top: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-xl-top
+);
+
+$padding-xl-left: () !default;
+$padding-xl-left: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-xl-left
+);
+
+$padding-xl-bottom: () !default;
+$padding-xl-bottom: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-xl-bottom
+);
+
+$padding-xl-right: () !default;
+$padding-xl-right: map-merge(
+  (
+    0: 0px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px
+  ),
+  $padding-xl-right
+);

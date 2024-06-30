@@ -1,0 +1,32 @@
+.custom-scrollbar {
+  /* Enable vertical scrollbar */
+  overflow-y: scroll;
+  /* Customize the scrollbar appearance */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: $brand-secondary transparent; /* Track color and thumb color */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #333; /* Color of the scrollbar thumb */
+}
+
+a.social-media-links {
+  border: 1px solid $brand-primary;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: $brand-primary;
+  transition: .25s ease-in-out;
+
+  &:hover{
+    color: $brand-secondary;
+    border: 1px solid $brand-secondary;
+  }
+}
