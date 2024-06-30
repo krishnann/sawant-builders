@@ -1,6 +1,6 @@
 import React from "react";
 
-function NavLinks() {
+function NavLinks({ toggleNavbar }) {
   const navItems = [
     {
       name: "Home",
@@ -29,10 +29,10 @@ function NavLinks() {
     },
   ];
 
-  //   const navigateToThePage = (slugVal) => {
-  //     navigate(slugVal);
-  //     toggleNavbar();
-  //   };
+  const navigateToThePage = () => {
+    // navigate(slugVal);
+    toggleNavbar();
+  };
 
   return (
     <div>
@@ -43,7 +43,7 @@ function NavLinks() {
             <li key={item.name} className="nav-item me-0 me-lg-15 p-15 p-lg-0">
               <a
                 href={`#${item.slug.replace("/", "")}`}
-                // onClick={() => navigateToThePage(item.slug)}
+                onClick={navigateToThePage}
                 className="nav-link"
               >
                 {item.name}

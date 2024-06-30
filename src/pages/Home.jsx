@@ -219,14 +219,14 @@ const Home = () => {
       <section className="about-us" id="about-us">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4">
+            <div className="col-lg-4 order-2 order-lg-1">
               <img
-                src="/src/assets/content-images/banner6.jpg"
+                src="/assets/content-images/banner6.jpg"
                 alt=""
                 className="img-fluid mb-10 mb-lg-0"
               />
             </div>
-            <div className="col-lg-8">
+            <div className="col-lg-8 order-1 order-lg-2">
               <h2 className="text-secondary">About Us</h2>
               <p>
                 Welcome to Sawant Builders, where we're dedicated to crafting
@@ -277,7 +277,7 @@ const Home = () => {
             </div>
             <div className="col-lg-4">
               <img
-                src="/src/assets/content-images/banner5.jpg"
+                src="/assets/content-images/banner5.jpg"
                 alt=""
                 className="img-fluid"
               />

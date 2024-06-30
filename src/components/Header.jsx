@@ -36,6 +36,11 @@ function Header() {
       console.log("Footer height:", footerHeight);
     }
   };
+
+  const toggleCollapsibleNavbar = () => {
+    document.querySelector(".navbar-toggler").click();
+  };
+
   useEffect(() => {
     setMainPadding();
     setTimeout(function () {
@@ -79,7 +84,7 @@ function Header() {
     <nav className="navbar navbar-expand-lg bg-white fixed-top" id="navbar">
       <div className="container">
         <a className="navbar-brand p-0" href="#">
-          <img src="src\assets\style-images\logo.png" />
+          <img src="/assets/style-images/logo.png" />
         </a>
         <button
           className={`navbar-toggler p-0 mt-10 collapsed ${
@@ -99,7 +104,7 @@ function Header() {
           </div>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <NavLinks />
+          <NavLinks toggleNavbar={toggleCollapsibleNavbar} />
         </div>
       </div>
     </nav>

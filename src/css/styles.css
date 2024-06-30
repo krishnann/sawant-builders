@@ -1807,7 +1807,7 @@ a.social-media-links:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%);
-  background: center/cover url("/src/assets/style-images/logo-abbr.png") no-repeat;
+  background: center/cover url("/assets/style-images/logo-abbr.png") no-repeat;
 }
 
 .visiting-open-icon:before, .contact-icon:before, .address-icon:before {
@@ -1841,7 +1841,11 @@ a.social-media-links:hover {
 }
 
 .navbar {
+  min-height: 90px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.navbar.fixed-top {
+  top: -1px;
 }
 .navbar .nav-link {
   position: relative;
@@ -2051,10 +2055,10 @@ footer .copyright-content {
   }
 }
 .card.project-card .card-img.project-1 {
-  background: center 0/cover url("/src/assets/content-images/banner1.jpg") no-repeat;
+  background: center 0/cover url("/assets/content-images/banner1.jpg") no-repeat;
 }
 .card.project-card .card-img.project-2 {
-  background: center 0/cover url("/src/assets/content-images/banner2.jpg") no-repeat;
+  background: center 0/cover url("/assets/content-images/banner2.jpg") no-repeat;
 }
 .card.project-card .card-img-overlay {
   top: 100%;
@@ -2172,11 +2176,11 @@ select {
   }
 }
 .carousel.banner-carousel .carousel-item.banner-1 {
-  background: center 0/cover url("/src/assets/content-images/banner2.jpg") no-repeat;
+  background: center 0/cover url("/assets/content-images/banner2.jpg") no-repeat;
 }
 @media (min-width: 992px) {
   .carousel.banner-carousel .carousel-item.banner-1 {
-    background: center -60px/cover url("/src/assets/content-images/banner2.jpg") no-repeat;
+    background: center -60px/cover url("/assets/content-images/banner2.jpg") no-repeat;
   }
 }
 .carousel.testimonial-carousel {
@@ -2224,7 +2228,7 @@ select {
   right: -30px;
 }
 .carousel.testimonial-carousel .carousel-control-prev-icon, .carousel.testimonial-carousel .carousel-control-next-icon {
-  background: center/cover url("/src/assets/style-images/angel-icon.svg") no-repeat;
+  background: center/cover url("assets/style-images/angel-icon.svg") no-repeat;
 }
 .carousel.testimonial-carousel .carousel-control-next-icon {
   transform: rotate(180deg);

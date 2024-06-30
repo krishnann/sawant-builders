@@ -32,10 +32,10 @@
         }
 
             &.banner-1 {
-                background: center 0 /cover url("/src/assets/content-images/banner2.jpg") no-repeat;
+                background: center 0 /cover url("/assets/content-images/banner2.jpg") no-repeat;
 
                 @include media-breakpoint-up(lg) {
-                    background: center -60px /cover url("/src/assets/content-images/banner2.jpg") no-repeat;
+                    background: center -60px /cover url("/assets/content-images/banner2.jpg") no-repeat;
                 }
             }
 
@@ -99,7 +99,7 @@
         }
 
         .carousel-control-prev-icon {
-            background: center/cover url("/src/assets/style-images/angel-icon.svg") no-repeat;
+            background: center/cover url("assets/style-images/angel-icon.svg") no-repeat;
         }
 
         .carousel-control-next-icon {
