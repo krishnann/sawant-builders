@@ -30,3 +30,50 @@ a.social-media-links {
     border: 1px solid $brand-secondary;
   }
 }
+
+.list{
+  list-style: none;
+  padding: 0 0 0 20px;
+  li{
+    appearance: none;
+    position: relative;
+    margin-bottom: 10px;
+    &::before{
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      position: absolute;
+      left: -15px;
+      top: 5px;
+      background-color: $brand-secondary;
+    }
+  }
+}
+
+.table{
+  tbody, td, tfoot, th, thead, tr{
+    border-color: $brand-primary;
+  }
+}
+
+.download-link{
+  font-weight: 800;
+  color: $brand-primary;
+  @include font-size(16px);
+  &:before{
+    font-weight: 800;
+    content: "\f019";
+    margin-right: 5px;
+    @include font-size(16px);
+    font-family: "Font Awesome 5 Free";
+  }
+
+}
+
+span.badge.text-bg-primary {
+  background-color: $brand-primary !important;
+  font-weight: normal;
+  @include font-size(14px);
+  padding: 5px 10px;
+}

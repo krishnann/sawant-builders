@@ -14,7 +14,10 @@
       @include media-breakpoint-up(lg){
         border-radius: 4px;
       }
-    min-height: 350px;
+      min-height: 250px;
+      @include media-breakpoint-up(md){
+      min-height: 350px;
+    }
     
     &.project-1{
       background: center 0 /cover url("/assets/content-images/banner1.jpg") no-repeat;
@@ -39,11 +42,15 @@
 
       background-color: rgba($brand-secondary, 0.85);
 
-      p.card-text {
+      .card-text {
         @include media-breakpoint-up(lg) {
         margin: 0;
-        height: 140px;
+        height: 120px;
         overflow-y: auto;
+        }
+
+        p{
+          color: $white;
         }
       }
 
@@ -73,6 +80,12 @@
     &-body {
       display: flex;
       align-items: center;
+      // @include media-breakpoint-up(lg){
+      padding: 10px;
+    // }
+    @include media-breakpoint-up(xl){
+      padding: 15px;
+    }
     }
   }
 }

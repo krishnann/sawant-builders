@@ -19,10 +19,13 @@ function Footer() {
               123 Main Street, Cityville, Stateville 56789, Country
             </p>
             <p className="mb-5">
-              <strong>Contact No:</strong>+0832-2957755
+              <strong>Contact No:</strong> +0832-2957755
             </p>
             <p className="mb-15">
-              <strong>Email:</strong>sawantbuilders@gmail.com
+              <strong>Email:</strong>{" "}
+              <a href="mailto:sawantbuilders@gmail.com">
+                sawantbuilders@gmail.com
+              </a>
             </p>
           </div>
 

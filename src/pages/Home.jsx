@@ -1,12 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
+import { useForm } from "react-hook-form";
+import ReactHtmlParser from "html-react-parser";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
-const Home = () => {
-  // const [firstName, setFirstName] = useState(null);
-  // const [lastName, setLastName] = useState(null);
-  // const [fname, setFname] = useState(null);
+const Home = ({ projects }) => {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data); // You can handle form data submission here
+    const config = {
+      SecureToken: "2AD84815AD9C38CB812AFE947CF28D2CF4FF",
+      Port: 2525,
+      To: "testmailkd@yopmail.com",
+      From: "knaik0901@gmail.com",
+      Subject: "Guest is interested in project",
+      Body: "And this is the body",
+    };
+
+    if (window.Email) {
+      window.Email.send(config)
+        .then((message) => {
+          if (message === "OK") {
+            setIsFormSubmitted(true); // Update state or perform other actions
+          } else {
+            alert("Failed to submit: " + message); // Show error message
+          }
+        })
+        .catch((error) => {
+          console.error("Error sending email:", error); // Log any errors
+          alert("Failed to submit: " + error); // Show error message
+        });
+    } else {
+      alert("SMTPJS library not loaded."); // Handle case where SMTPJS is not loaded
+    }
+  };
 
   var settings = {
     dots: true,
@@ -44,43 +78,10 @@ const Home = () => {
     ],
   };
 
-  const data = [
-    {
-      name: `John Morgan`,
-      img: `/students/John_Morgan.jpg`,
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-    {
-      name: `Ellie Anderson`,
-      img: `/students/Ellie_Anderson.jpg`,
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-    {
-      name: `Nia Adebayo`,
-      img: `/students/Nia_Adebayo.jpg`,
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-    {
-      name: `Rigo Louie`,
-      img: `/students/Rigo_Louie.jpg`,
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-    {
-      name: `Mia Williams`,
-      img: `/students/Mia_Williams.jpg`,
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-  ];
-
   return (
     <>
       <section>
         <div id="bannerCarousel" className="carousel slide banner-carousel">
-          {/* <div className="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div> */}
           <div className="carousel-inner">
             <div className="carousel-item banner-1 active">
               <div className="carousel-caption">
@@ -172,9 +173,11 @@ const Home = () => {
                 <div className="card-body">
                   <div className="d-flex align-items-center">
                     <div className="flex-shrink-0 media-img address-icon"></div>
-                    <div className="flex-grow-1 ms-10">
-                      Sawant Builders Pvt. Ltd. 123 Main Street, Cityville,
-                      Stateville 56789, Country
+                    <div className="flex-grow-1 ms-10 ms-lg-5 ms-xl-10">
+                      <p className="mb-0">
+                        TF-8, 3rd Floor, MAPUSA HEIGHTS, Near Judicial Court,
+                        Alto Mapusa, Bardez, Goa. 403507
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -185,14 +188,24 @@ const Home = () => {
                 <div className="card-body">
                   <div className="d-flex align-items-center">
                     <div className="flex-shrink-0 media-img contact-icon"></div>
-                    <div className="flex-grow-1 ms-10">
-                      <span className="text-nowrap">
-                        <span className="text-nowrap">+91-9921750813</span>
-                      </span>
-                      <br />
-                      <span className="text-nowrap">
-                        sawantbuilders@gmail.com
-                      </span>
+                    <div className="flex-grow-1 ms-10 ms-lg-5 ms-xl-10">
+                      <p className="mb-5 text-nowrap">
+                        <strong>M: </strong>
+                        +91 9823016310/9284923037
+                      </p>
+                      <p className="mb-5 text-nowrap">
+                        <strong>T: </strong>
+                        +91 832-2910310
+                      </p>
+                      <p className="mb-0 text-nowrap">
+                        <strong>E: </strong>
+                        <a
+                          href="mailto:sawantbuildersgoa@gmail.com"
+                          className="link"
+                        >
+                          sawantbuildersgoa@gmail.com
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -203,9 +216,11 @@ const Home = () => {
                 <div className="card-body">
                   <div className="d-flex align-items-center">
                     <div className="flex-shrink-0 media-img visiting-open-icon"></div>
-                    <div className="flex-grow-1 ms-10">
-                      Monday To Friday <br />
-                      9:00am To 5:00pm
+                    <div className="flex-grow-1 ms-10 ms-lg-5 ms-xl-10">
+                      <p className="mb-0">
+                        Monday To Friday <br />
+                        9:00am To 5:00pm
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -298,18 +313,23 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="card project-card mb-25 mb-lg-0">
-                <div className="card-img project-1"></div>
+                <div
+                  className="card-img "
+                  style={{
+                    background: `center 0 /cover url("${projects[0].projectImages[0]}") no-repeat`,
+                  }}
+                ></div>
 
                 <div className="card-img-overlay">
-                  <h3 className="card-title text-white">Sawant Residency</h3>
-                  <p className="card-text text-white pe-25">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer. This is a wider card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
-                  <h5 className="text-white mb-20">Status: In Progress</h5>
+                  <h3 className="card-title text-white">
+                    {projects[0].projectName}
+                  </h3>
+                  <div className="card-text pe-25">
+                    {ReactHtmlParser(projects[0].projectDetailsList[0].details)}
+                  </div>
+                  <h5 className="text-white mt-5 mb-20">
+                    Status: {projects[0].status}
+                  </h5>
 
                   <a href="#" className="btn btn-primary">
                     View Details
@@ -319,17 +339,22 @@ const Home = () => {
             </div>
             <div className="col-lg-6">
               <div className="card project-card project-2">
-                <div className="card-img project-2"></div>
+                <div
+                  className="card-img"
+                  style={{
+                    background: `center 0 /cover url("${projects[1].projectImages[0]}") no-repeat`,
+                  }}
+                ></div>
                 <div className="card-img-overlay">
-                  <h3 className="card-title text-white">Sawant Vihar</h3>
+                  <h3 className="card-title text-white">
+                    {projects[1].projectName}
+                  </h3>
                   <p className="card-text text-white pe-25">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer. This is a wider card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
+                    {ReactHtmlParser(projects[1].projectDetailsList[0].details)}
                   </p>
-                  <h5 className="text-white mb-20">Status: In Progress</h5>
+                  <h5 className="text-white mb-20">
+                    Status: {projects[1].status}
+                  </h5>
                   <a href="#" className="btn btn-primary">
                     View Details
                   </a>
@@ -438,131 +463,169 @@ const Home = () => {
           </p>
           <div className="row">
             <div className="col-lg-6">
-              <form class="row g-3 needs-validation">
-                <div class="col-md-6">
-                  <label for="validationCustom01" class="form-label">
-                    First name
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="validationCustom01"
-                    // value="Mark"
-                    required
-                  />
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div class="col-md-6">
-                  <label for="validationCustom02" class="form-label">
-                    Last name
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="validationCustom02"
-                    // value="Otto"
-                    required
-                  />
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div className="col-md-12">
-                  <label for="validationCustom01" class="form-label">
-                    Project
-                  </label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Select Project</option>
-                    <option value="1">Sawant Residency</option>
-                    <option value="2">Sawant Vihar</option>
-                  </select>
-                </div>
-                {/* <div class="col-md-6"></div> */}
-                <div class="col-md-6">
-                  <label for="validationCustom01" class="form-label">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="validationCustom01"
-                    // value="Mark"
-                    required
-                  />
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div class="col-md-6">
-                  <label for="validationCustom02" class="form-label">
-                    Phone No.
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="validationCustom02"
-                    // value="Otto"
-                    required
-                  />
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div className="col-12">
-                  <div class="mb-5">
-                    <label for="exampleFormControlTextarea1" class="form-label">
-                      Comment
+              {isFormSubmitted === false ? (
+                <form
+                  className="row g-3 needs-validation"
+                  onSubmit={handleSubmit(onSubmit)}
+                >
+                  <div className="col-md-6">
+                    <label htmlFor="validationCustom01" className="form-label">
+                      First name
                     </label>
-                    <textarea
-                      class="form-control"
-                      id="exampleFormControlTextarea1"
-                      rows="3"
-                    ></textarea>
+                    <input
+                      type="text"
+                      className={`form-control ${
+                        errors.firstName ? "is-invalid" : ""
+                      }`}
+                      id="validationCustom01"
+                      {...register("firstName", {
+                        required: "First name is required",
+                      })}
+                    />
+                    {errors.firstName && (
+                      <div className="invalid-feedback">
+                        {errors.firstName.message}
+                      </div>
+                    )}
                   </div>
+                  <div className="col-md-6">
+                    <label htmlFor="validationCustom02" className="form-label">
+                      Last name
+                    </label>
+                    <input
+                      type="text"
+                      className={`form-control ${
+                        errors.lastName ? "is-invalid" : ""
+                      }`}
+                      id="validationCustom02"
+                      {...register("lastName", {
+                        required: "Last name is required",
+                      })}
+                    />
+                    {errors.lastName && (
+                      <div className="invalid-feedback">
+                        {errors.lastName.message}
+                      </div>
+                    )}
+                  </div>
+                  <div className="col-md-12">
+                    <label htmlFor="validationCustom03" className="form-label">
+                      Project
+                    </label>
+                    <select
+                      className={`form-select ${
+                        errors.projectName ? "is-invalid" : ""
+                      }`}
+                      {...register("projectName", {
+                        required: "Please select a project",
+                      })}
+                      aria-label="Default select example"
+                    >
+                      <option value="">Select Project</option>
+                      <option value="Sawant Residency">Sawant Residency</option>
+                      <option value="Sawant Vihar">Sawant Vihar</option>
+                    </select>
+                    {errors.projectName && (
+                      <div className="invalid-feedback">
+                        {errors.projectName.message}
+                      </div>
+                    )}
+                  </div>
+                  <div className="col-md-6">
+                    <label htmlFor="validationCustom04" className="form-label">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className={`form-control ${
+                        errors.email ? "is-invalid" : ""
+                      }`}
+                      id="validationCustom04"
+                      {...register("email", {
+                        required: "Email is required",
+                        pattern: {
+                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                          message: "Invalid email address",
+                        },
+                      })}
+                    />
+                    {errors.email && (
+                      <div className="invalid-feedback">
+                        {errors.email.message}
+                      </div>
+                    )}
+                  </div>
+                  <div className="col-md-6">
+                    <label htmlFor="validationCustom05" className="form-label">
+                      Phone No.
+                    </label>
+                    <input
+                      type="text"
+                      className={`form-control ${
+                        errors.phno ? "is-invalid" : ""
+                      }`}
+                      id="validationCustom05"
+                      {...register("phno", {
+                        required: "Phone number is required",
+                        pattern: {
+                          value: /^[0-9]{10}$/,
+                          message: "Invalid phone number (10 digits)",
+                        },
+                      })}
+                    />
+                    {errors.phno && (
+                      <div className="invalid-feedback">
+                        {errors.phno.message}
+                      </div>
+                    )}
+                  </div>
+                  <div className="col-12">
+                    <div className="mb-5">
+                      <label
+                        htmlFor="exampleFormControlTextarea1"
+                        className="form-label"
+                      >
+                        Comment
+                      </label>
+                      <textarea
+                        className={`form-control ${
+                          errors.message ? "is-invalid" : ""
+                        }`}
+                        {...register("message")}
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                      ></textarea>
+                      {errors.message && (
+                        <div className="invalid-feedback">
+                          Please enter a comment
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <div className="col-12">
+                    <button className="btn btn-primary mb-25" type="submit">
+                      Submit form
+                    </button>
+                  </div>
+                </form>
+              ) : (
+                <div className="form-submission-success">
+                  <h4>Thank you!</h4>
+                  <p>
+                    Your request is submitted. We will get back to you soon!
+                  </p>
                 </div>
-                <div class="col-12">
-                  <button class="btn btn-primary mb-25" type="submit">
-                    Submit form
-                  </button>
-                </div>
-              </form>
+              )}
             </div>
             <div className="col-lg-6">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30744.159126575225!2d73.92690091425048!3d15.590586091360644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf966fcc6c3167%3A0x1d63cb9fcf98a43!2sDicholi%2C%20Goa!5e0!3m2!1sen!2sin!4v1719499303391!5m2!1sen!2sin"
-                // style="border:0;"
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7685.909244826108!2d73.80720603867644!3d15.594073140074448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sTF-8%2C%203rd%20Floor%2C%20MAPUSA%20HEIGHTS%2C%20Near%20Judicial%20Court%2C%20Alto%20Mapusa%2C%20Bardez%2C%20Goa.%20403507!5e0!3m2!1sen!2sin!4v1721300948500!5m2!1sen!2sin"
                 allowfullscreen=""
                 className="map-iframe mb-20 mb-lg-0"
                 loading="lazy"
-                // referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
-
-              {/* <iframe
-                id="JotFormIFrame-241754979593476"
-                title="Information Request Form"
-                onload="window.parent.scrollTo(0,0)"
-                allowtransparency="true"
-                allow="geolocation; microphone; camera; fullscreen"
-                src="https://form.jotform.com/241754979593476"
-                frameborder="0"
-                style={{
-                  minWidth: "100%",
-                  maxWidth: "100%",
-                  height: "539px",
-                  border: "none",
-                }}
-                scrolling="no"
-              ></iframe>
-              <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-              <script>
-                window.jotformEmbedHandler("iframe[id='JotFormIFrame-241754979593476']",
-                "https://form.jotform.com/")
-              </script> */}
             </div>
           </div>
-
-          {/* <div className="text-center">
-            <a href="" className="btn btn-primary mt-35">
-              View All Projects
-            </a>
-          </div> */}
         </div>
       </section>
     </>

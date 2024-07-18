@@ -16,10 +16,6 @@ function Header() {
     }
   }
 
-  // const toggleCollapsibleNavbar = () => {
-  //   document.querySelector(".navbar-toggler").click();
-  // };
-
   const setMainPadding = () => {
     const headerElement = document.getElementById("navbar");
     const footerElement = document.getElementById("footer");
@@ -51,33 +47,33 @@ function Header() {
     window.addEventListener("resize", setMainPadding);
 
     // Function to handle smooth scrolling
-    const smoothScroll = (e) => {
-      e.preventDefault();
+    // const smoothScroll = (e) => {
+    //   e.preventDefault();
 
-      const targetId = e.currentTarget.getAttribute("href").substring(1); // Remove the '#'
-      const targetElement = document.getElementById(targetId);
+    //   const targetId = e.currentTarget.getAttribute("href").substring(1); // Remove the '#'
+    //   const targetElement = document.getElementById(targetId);
 
-      if (targetElement) {
-        const targetTop =
-          targetElement.getBoundingClientRect().top + window.pageYOffset - 40;
-        window.scrollTo({
-          top: targetTop,
-          behavior: "smooth",
-        });
-      }
-    };
+    //   if (targetElement) {
+    //     const targetTop =
+    //       targetElement.getBoundingClientRect().top + window.pageYOffset - 40;
+    //     window.scrollTo({
+    //       top: targetTop,
+    //       behavior: "smooth",
+    //     });
+    //   }
+    // };
 
-    // Add event listeners for smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", smoothScroll);
-    });
+    // // Add event listeners for smooth scrolling
+    // document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    //   anchor.addEventListener("click", smoothScroll);
+    // });
 
-    // Clean up event listeners on component unmount
-    return () => {
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.removeEventListener("click", smoothScroll);
-      });
-    };
+    // // Clean up event listeners on component unmount
+    // return () => {
+    //   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    //     anchor.removeEventListener("click", smoothScroll);
+    //   });
+    // };
   }, []);
 
   return (

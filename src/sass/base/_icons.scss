@@ -29,5 +29,15 @@
 .facebook-icon:before {
     content: '\f39e';
     font-family: "Font Awesome 5 Free";
-    // @extend %generic-icon-styling;
 }
+
+.download-icon:before{
+    content: "\f019";
+    @extend %generic-icon-styling;
+}
+
+.accordion-button::after{
+    content: '\2b';
+    background: none;
+    @extend %generic-icon-styling;
+  }

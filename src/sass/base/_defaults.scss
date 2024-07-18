@@ -5,7 +5,7 @@ html {
 
 body {
   line-height: 1.25;
-  @include font-size(15px);
+  @include font-size(14px);
   // font-family: "Kanit", sans-serif;
   // font-family: "Inter", sans-serif;
   font-family: "Noto Sans", sans-serif;
@@ -25,7 +25,7 @@ body {
   background-color: $brand-primary;
   color: $white;
   cursor: pointer;
-  padding: 10px 0;
+  padding: 5px 0;
   border-radius: 30px;
 }
 

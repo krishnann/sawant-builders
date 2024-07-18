@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function NavLinks({ toggleNavbar }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const navItems = [
     {
       name: "Home",
@@ -29,9 +33,37 @@ function NavLinks({ toggleNavbar }) {
     },
   ];
 
-  const navigateToThePage = () => {
-    // navigate(slugVal);
-    toggleNavbar();
+  const scrollToSection = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const targetTop =
+        targetElement.getBoundingClientRect().top + window.pageYOffset - 40;
+      window.scrollTo({
+        top: targetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  useEffect(() => {
+    const { hash } = location;
+    if (hash) {
+      const targetId = hash.substring(1); // Remove the '#' from hash
+      scrollToSection(targetId);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location]);
+
+  const handleNavigation = (slugVal) => {
+    if (slugVal === "/" || slugVal === "/our-projects") {
+      navigate(slugVal);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const targetId = slugVal.replace("/", "");
+      navigate(`/#${targetId}`);
+      // history.push(`/#${targetId}`); // Update URL with hash fragment
+    }
   };
 
   return (
@@ -42,8 +74,11 @@ function NavLinks({ toggleNavbar }) {
           item.active ? (
             <li key={item.name} className="nav-item me-0 me-lg-15 p-15 p-lg-0">
               <a
-                href={`#${item.slug.replace("/", "")}`}
-                onClick={navigateToThePage}
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation(item.slug);
+                }}
                 className="nav-link"
               >
                 {item.name}

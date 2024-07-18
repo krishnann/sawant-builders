@@ -13,16 +13,18 @@
     border: 2px solid $brand-primary;
 
     // Banner button
-    &.banner-btn{
+    &.banner-btn {
       color: $white;
       width: 100%;
-      @include media-breakpoint-up(sm){
+
+      @include media-breakpoint-up(sm) {
         width: auto;
       }
+
       background-color: transparent;
     }
 
-    &:hover{
+    &:hover {
       color: $white;
       background-color: $brand-primary;
     }
@@ -37,9 +39,45 @@
     background-color: $white;
     border: 2px solid $brand-secondary;
 
-    &:hover{
+    &:hover {
       color: $white;
       background-color: $brand-secondary;
     }
+  }
+}
+
+// Accordion styling
+.accordion-item {
+  border-radius: 4px;
+  margin-bottom: 10px;
+
+  .accordion-button {
+    box-shadow: none;
+    border-radius: 4px;
+    color: $white;
+    line-height: 20px;
+    text-align: center;
+    background-color: $brand-secondary;
+    border: 1px solid $brand-secondary;
+
+    &:hover {
+      color: $white;
+      background-color: $brand-secondary;
+    }
+
+    &:not(.collapsed)::after{
+    background: none;
+      transform: none;
+    }
+
+    &[aria-expanded=true]:not(.collapsed)::after{
+      transform: rotate(45deg);
+    }
+  }
+
+
+  &:last-of-type>.accordion-header .accordion-button.collapsed,
+  &:first-of-type>.accordion-header .accordion-button {
+    border-radius: 4px;
   }
 }
