@@ -96,15 +96,20 @@ const Home = ({ projects }) => {
                 <a
                   href="#"
                   className="btn btn-primary banner-btn mb-15 mb-sm-0"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation("/our-projects");
+                  }}
                 >
                   See Projects
                 </a>
-                <a
+                <Link to="/#contact-us" className="btn btn-primary banner-btn ms-0 ms-sm-20"> Inquire Now</Link>
+                {/* <a
                   href="#"
                   className="btn btn-primary banner-btn ms-0 ms-sm-20"
                 >
                   Inquire Now
-                </a>
+                </a> */}
               </div>
             </div>
             {/* <div className="carousel-item banner-2">
@@ -332,9 +337,7 @@ const Home = ({ projects }) => {
                     Status: {projects[0].status}
                   </h5>
 
-                  <a href="#" className="btn btn-primary">
-                    View Details
-                  </a>
+                  <Link to={`/our-projects`} className="btn btn-primary">View Details</Link>
                 </div>
               </div>
             </div>
@@ -356,10 +359,7 @@ const Home = ({ projects }) => {
                   <h5 className="text-white mb-20">
                     Status: {projects[1].status}
                   </h5>
-                  <Link to="/our-projects" className="btn btn-primary">View Details</Link>
-                  {/* <a href="#" className="btn btn-primary">
-                    View Details
-                  </a> */}
+                  <Link to={`/our-projects#${projects[1].projectName.toLowerCase().replaceAll(" ", "-")}`} className="btn btn-primary">View Details</Link>
                 </div>
               </div>
             </div>
@@ -390,7 +390,7 @@ const Home = ({ projects }) => {
                 attention to detail in every endeavor.
               </h5>
               <h5 className="text-primary mb-0 text-uppercase">
-                Mr. Anjali Desai
+                Ms. Anjali Desai
               </h5>
             </div>
             <div className="card">
@@ -403,7 +403,7 @@ const Home = ({ projects }) => {
                 attention to detail in every endeavor.
               </h5>
               <h5 className="text-primary mb-0 text-uppercase">
-                Mr. Anjali Desai 2
+                Ms. Anjali Desai 2
               </h5>
             </div>
             <div className="card">
@@ -416,7 +416,7 @@ const Home = ({ projects }) => {
                 attention to detail in every endeavor.
               </h5>
               <h5 className="text-primary mb-0 text-uppercase">
-                Mr. Anjali Desai 3
+                Ms. Anjali Desai 3
               </h5>
             </div>
             <div className="card">
@@ -429,7 +429,7 @@ const Home = ({ projects }) => {
                 attention to detail in every endeavor.
               </h5>
               <h5 className="text-primary mb-0 text-uppercase">
-                Mr. Anjali Desai 4
+                Ms. Anjali Desai 4
               </h5>
             </div>
             <div className="card">
@@ -442,7 +442,7 @@ const Home = ({ projects }) => {
                 attention to detail in every endeavor.
               </h5>
               <h5 className="text-primary mb-0 text-uppercase">
-                Mr. Anjali Desai 5
+                Ms. Anjali Desai 5
               </h5>
             </div>
           </Slider>

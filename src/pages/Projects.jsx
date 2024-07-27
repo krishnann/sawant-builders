@@ -42,9 +42,9 @@ function Projects({ projects }) {
       <div className="internal-banner-img banner-1">
         <h1 className="internal-banner-title">Our Projects</h1>
       </div>
-      <section className="mt-30">
+      <section className="mt-35">
         {projects.map((project, index) => (
-          <>
+          <div id={project.projectName.toLowerCase().replaceAll(" ", "-")}>
             <h2>{project.projectName}</h2>
             <div className="row row-cols-lg-2">
               <div className="col">
@@ -125,7 +125,7 @@ function Projects({ projects }) {
                 <span className="logo-abbr"></span>
               </span>
             )}
-          </>
+          </div>
         ))}
       </section>
       {/* {projects.length > 1 ? (

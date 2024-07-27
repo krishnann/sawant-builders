@@ -116,6 +116,12 @@
   margin-top: 35px !important;
 }
 
+.mt-50,
+.my-50 {
+  margin-top: 3.125rem !important;
+  margin-top: 50px !important;
+}
+
 .ms-0,
 .mx-0 {
   margin-left: 0rem !important;
