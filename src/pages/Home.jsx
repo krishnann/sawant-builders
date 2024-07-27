@@ -93,7 +93,7 @@ const Home = ({ projects }) => {
                     Excellence in Every Detail
                   </q>
                 </h1>
-                <Link to="/our-projects" className="btn btn-primary banner-btn ms-0 ms-sm-20">See Projects</Link>
+                <Link to="/our-projects" className="btn btn-primary banner-btn ms-0 ms-sm-20 mb-10 mb-md-0">See Projects</Link>
                 <Link to="/#contact-us" className="btn btn-primary banner-btn ms-0 ms-sm-20">Inquire Now</Link>
               </div>
             </div>
