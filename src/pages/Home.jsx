@@ -333,7 +333,7 @@ const Home = ({ projects }) => {
                   <div className="card-text pe-25 custom-scrollbar-primary">
                     {ReactHtmlParser(projects[0].projectDetailsList[0].details)}
                   </div>
-                  <h5 className="text-white mt-5 mb-20">
+                  <h5 className="text-white mt-15 mb-20">
                     Status: {projects[0].status}
                   </h5>
 
@@ -356,7 +356,7 @@ const Home = ({ projects }) => {
                   <p className="card-text text-white pe-25 custom-scrollbar">
                     {ReactHtmlParser(projects[1].projectDetailsList[0].details)}
                   </p>
-                  <h5 className="text-white mb-20">
+                  <h5 className="text-white mt-15 mb-20">
                     Status: {projects[1].status}
                   </h5>
                   <Link to={`/our-projects#${projects[1].projectName.toLowerCase().replaceAll(" ", "-")}`} className="btn btn-primary">View Details</Link>
