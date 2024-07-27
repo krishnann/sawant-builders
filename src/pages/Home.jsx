@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import { useForm } from "react-hook-form";
 import ReactHtmlParser from "html-react-parser";
+import { Link } from "react-router-dom";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
@@ -355,18 +356,17 @@ const Home = ({ projects }) => {
                   <h5 className="text-white mb-20">
                     Status: {projects[1].status}
                   </h5>
-                  <a href="#" className="btn btn-primary">
+                  <Link to="/our-projects" className="btn btn-primary">View Details</Link>
+                  {/* <a href="#" className="btn btn-primary">
                     View Details
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
           </div>
 
           <div className="text-center">
-            <a href="" className="btn btn-primary mt-35">
-              View All Projects
-            </a>
+            <Link to="/our-projects" className="btn btn-primary mt-35">View All Projects</Link>
           </div>
         </div>
       </section>

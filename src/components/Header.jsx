@@ -5,10 +5,8 @@ function Header() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   function toggleHamburgerIcon() {
-    console.log(`Hello ${screen.width}`);
     if (screen.width < 992) {
       setIsNavbarOpen(!isNavbarOpen);
-      console.log(`isNavbarOpen = ${isNavbarOpen}`);
       document.body.classList.toggle("overflow-hidden");
       document
         .getElementsByClassName("custom-scrollbar")[0]
@@ -27,7 +25,6 @@ function Header() {
       document.body.style.paddingTop = `${headerHeight}px`;
       document.body.style.paddingBottom = `${footerHeight}px`;
       document.getElementById("navbarNav").style.top = `${headerHeight}px`;
-
     }
   };
 

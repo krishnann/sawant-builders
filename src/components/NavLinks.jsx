@@ -62,7 +62,10 @@ function NavLinks({ toggleNavbar }) {
     } else {
       const targetId = slugVal.replace("/", "");
       navigate(`/#${targetId}`);
-      // history.push(`/#${targetId}`); // Update URL with hash fragment
+    }
+
+    if(window.screen.width < 992){
+      toggleNavbar();
     }
   };
 

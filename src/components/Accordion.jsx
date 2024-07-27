@@ -22,7 +22,7 @@ const Accordion = ({
           aria-expanded={isActive}
           aria-controls={id + "" + projectID}
         >
-          {title} ({isActive ? "true" : "false"})
+          {title}
         </button>
       </h2>
       <div
