@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Accordion from "../components/Accordion";
 import Slider from "react-slick";
 function Projects({ projects }) {
-  const [activeAccordionId, setActiveAccordionId] = useState(
-    "projectintroduction"
-  );
+
+  const [activeAccordionIds, setActiveAccordionIds] = useState({});
   const settings = {
     dots: true,
     infinite: true,
@@ -13,10 +12,29 @@ function Projects({ projects }) {
     slidesToScroll: 1,
   };
 
-  const toggleAccordion = (accordionId) => {
-    setActiveAccordionId(
-      activeAccordionId === accordionId ? null : accordionId
-    );
+  const toggleAccordion = (projectID, accordionId) => {
+    console.log(`projectID ${projectID}, accordionID = ${accordionId}`);
+    // projectID = project 1, accordionID = projectintroduction 
+    setActiveAccordionIds(prevIds => {
+      const currentIds = prevIds[projectID] || [];//prevIds[project1]
+      const currentIndex = currentIds.indexOf(accordionId);
+
+      // if the accordion id is not present 
+      if (currentIndex === -1) {
+        // Add accordionId to the array if it's not already there
+        return {
+          ...prevIds,
+          [projectID]: [...currentIds, accordionId]
+        };
+      } 
+      else {
+        // Remove accordionId from the array if it's already there
+        return {
+          ...prevIds,
+          [projectID]: currentIds.filter(id => id !== accordionId)
+        };
+      }
+    });
   };
 
   return (
@@ -93,14 +111,12 @@ function Projects({ projects }) {
                       projectID={project.projectID}
                       title={accordion.title}
                       details={accordion.details}
-                      isActive={
-                        activeAccordionId ===
-                        accordion.title.toLowerCase().replaceAll(" ", "")
-                      }
-                      toggleAccordion={toggleAccordion}
+                      isActive={index === 0 || activeAccordionIds[project.projectID]?.includes(accordion.title.toLowerCase().replaceAll(" ", ""))}
+                      toggleAccordion={() => toggleAccordion(project.projectID, accordion.title.toLowerCase().replaceAll(" ", ""))}
                     />
                   ))}
                 </div>
+
               </div>
             </div>
             {index !== projects.length - 1 && ( // Conditionally render <hr> except for the last project

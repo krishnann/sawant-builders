@@ -8,6 +8,7 @@ const Accordion = ({
   isActive,
   toggleAccordion,
 }) => {
+
   const id = title.toLowerCase().replaceAll(" ", "");
   return (
     <div className="accordion-item">
@@ -17,11 +18,11 @@ const Accordion = ({
           type="button"
           data-bs-toggle="collapse"
           data-bs-target={`#${id}${projectID}`}
-          onClick={() => toggleAccordion(id + "" + projectID)}
-          aria-expanded={isActive ? "true" : "false"}
+          onClick={() => toggleAccordion}
+          aria-expanded={isActive}
           aria-controls={id + "" + projectID}
         >
-          {title}
+          {title} ({isActive ? "true" : "false"})
         </button>
       </h2>
       <div

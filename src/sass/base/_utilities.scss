@@ -41,3 +41,10 @@
             background: center /cover url("/assets/style-images/logo-abbr.png") no-repeat;
         }
 }
+
+.mobile-link{
+    @include media-breakpoint-up(lg){
+    pointer-events: none;
+    color: inherit !important;
+    }
+}

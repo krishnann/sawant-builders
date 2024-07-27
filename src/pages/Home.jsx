@@ -86,7 +86,7 @@ const Home = ({ projects }) => {
             <div className="carousel-item banner-1 active">
               <div className="carousel-caption">
                 <h1 className="text-white mb-25 fst-italic">
-                  <q>
+                  <q className="quote-text">
                     From Concept to Completion,
                     <br />
                     Excellence in Every Detail
@@ -191,11 +191,11 @@ const Home = ({ projects }) => {
                     <div className="flex-grow-1 ms-10 ms-lg-5 ms-xl-10">
                       <p className="mb-5 text-nowrap">
                         <strong>M: </strong>
-                        +91 9823016310/9284923037
+                        +91 <a href="tel:+91 9823016310" className="mobile-link link">9823016310</a> / <a href="tel:+91 9823016310" className="mobile-link link">9284923037</a>
                       </p>
                       <p className="mb-5 text-nowrap">
                         <strong>T: </strong>
-                        +91 832-2910310
+                        +91 <a href="tel:+91 9823016310" className="mobile-link link">832-2910310</a>
                       </p>
                       <p className="mb-0 text-nowrap">
                         <strong>E: </strong>
@@ -324,7 +324,7 @@ const Home = ({ projects }) => {
                   <h3 className="card-title text-white">
                     {projects[0].projectName}
                   </h3>
-                  <div className="card-text pe-25">
+                  <div className="card-text pe-25 custom-scrollbar-primary">
                     {ReactHtmlParser(projects[0].projectDetailsList[0].details)}
                   </div>
                   <h5 className="text-white mt-5 mb-20">
@@ -349,7 +349,7 @@ const Home = ({ projects }) => {
                   <h3 className="card-title text-white">
                     {projects[1].projectName}
                   </h3>
-                  <p className="card-text text-white pe-25">
+                  <p className="card-text text-white pe-25 custom-scrollbar">
                     {ReactHtmlParser(projects[1].projectDetailsList[0].details)}
                   </p>
                   <h5 className="text-white mb-20">

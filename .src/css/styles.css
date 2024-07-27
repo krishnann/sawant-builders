@@ -1745,7 +1745,7 @@ a.link:hover, footer .nav-item a.nav-link:hover {
   color: #c73c29;
 }
 
-.custom-scrollbar-primary, .custom-scrollbar {
+.custom-scrollbar {
   /* Enable vertical scrollbar */
   overflow-y: scroll;
   /* Customize the scrollbar appearance */
@@ -1753,11 +1753,7 @@ a.link:hover, footer .nav-item a.nav-link:hover {
   scrollbar-color: #c73c29 transparent; /* Track color and thumb color */
 }
 
-.custom-scrollbar-primary {
-  scrollbar-color: #029de0 transparent; /* Track color and thumb color */
-}
-
-.custom-scrollbar::-webkit-scrollbar, .custom-scrollbar-primary::-webkit-scrollbar {
+.custom-scrollbar::-webkit-scrollbar {
   width: 10px; /* Width of the scrollbar */
 }
 
@@ -1876,11 +1872,14 @@ span.badge.text-bg-primary {
 @media (min-width: 992px) {
   .mobile-link {
     pointer-events: none;
-    color: inherit !important;
   }
 }
 
-.quote-text::after, .quote-text:before, .accordion-button::after, .download-icon:before, .visiting-open-icon:before, .contact-icon:before, .address-icon:before {
+.help {
+  color: red;
+}
+
+.accordion-button::after, .download-icon:before, .visiting-open-icon:before, .contact-icon:before, .address-icon:before {
   color: #fff;
   font-size: 24px;
   font-size: 1.5rem;
@@ -1919,32 +1918,10 @@ span.badge.text-bg-primary {
   background: none;
 }
 
-.quote-text:before {
+.quote-text::before {
   content: "\f10d";
-  position: relative;
-  margin-right: 5px;
-  top: -15px;
-}
-@media (min-width: 992px) {
-  .quote-text:before {
-    top: -10px;
-    font-size: 35px;
-    font-size: 2.1875rem;
-  }
-}
-.quote-text::after {
-  content: "\f10e";
-  position: relative;
-  transform: rotate(50deg);
-  margin-left: 5px;
-  top: -15px;
-}
-@media (min-width: 992px) {
-  .quote-text::after {
-    top: -10px;
-    font-size: 35px;
-    font-size: 2.1875rem;
-  }
+  font-weight: 800;
+  font-family: "Font Awesome 5 Free";
 }
 
 .navbar {

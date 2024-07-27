@@ -70,7 +70,7 @@
       transform: none;
     }
 
-    &[aria-expanded=true]:not(.collapsed)::after{
+    &[aria-expanded=true]::after{
       transform: rotate(45deg);
     }
   }

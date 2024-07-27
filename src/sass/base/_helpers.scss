@@ -1,13 +1,23 @@
-.custom-scrollbar {
-  /* Enable vertical scrollbar */
-  overflow-y: scroll;
-  /* Customize the scrollbar appearance */
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: $brand-secondary transparent; /* Track color and thumb color */
+%generic-scrollbar-styling{
+    /* Enable vertical scrollbar */
+    overflow-y: scroll;
+    /* Customize the scrollbar appearance */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: $brand-secondary transparent; /* Track color and thumb color */
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+.custom-scrollbar {
+@extend %generic-scrollbar-styling;
+  &-primary{
+    @extend %generic-scrollbar-styling;
+    scrollbar-color: $brand-primary transparent; /* Track color and thumb color */
+  }
+}
+
+.custom-scrollbar, .custom-scrollbar-primary{
+  &::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {

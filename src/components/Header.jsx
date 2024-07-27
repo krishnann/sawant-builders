@@ -28,8 +28,6 @@ function Header() {
       document.body.style.paddingBottom = `${footerHeight}px`;
       document.getElementById("navbarNav").style.top = `${headerHeight}px`;
 
-      console.log("Header height:", headerHeight);
-      console.log("Footer height:", footerHeight);
     }
   };
 
