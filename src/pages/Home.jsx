@@ -93,23 +93,8 @@ const Home = ({ projects }) => {
                     Excellence in Every Detail
                   </q>
                 </h1>
-                <a
-                  href="#"
-                  className="btn btn-primary banner-btn mb-15 mb-sm-0"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavigation("/our-projects");
-                  }}
-                >
-                  See Projects
-                </a>
-                <Link to="/#contact-us" className="btn btn-primary banner-btn ms-0 ms-sm-20"> Inquire Now</Link>
-                {/* <a
-                  href="#"
-                  className="btn btn-primary banner-btn ms-0 ms-sm-20"
-                >
-                  Inquire Now
-                </a> */}
+                <Link to="/our-projects" className="btn btn-primary banner-btn ms-0 ms-sm-20">See Projects</Link>
+                <Link to="/#contact-us" className="btn btn-primary banner-btn ms-0 ms-sm-20">Inquire Now</Link>
               </div>
             </div>
             {/* <div className="carousel-item banner-2">
