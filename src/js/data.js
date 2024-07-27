@@ -50,7 +50,7 @@ export const projectList = [
           title: "Project Location",
           details: `
             <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7685.909244826108!2d73.80720603867644!3d15.594073140074448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sTF-8%2C%203rd%20Floor%2C%20MAPUSA%20HEIGHTS%2C%20Near%20Judicial%20Court%2C%20Alto%20Mapusa%2C%20Bardez%2C%20Goa.%20403507!5e0!3m2!1sen!2sin!4v1721300948500!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3842.8331678151685!2d73.93787807512604!3d15.60055998501307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDM2JzAyLjAiTiA3M8KwNTYnMjUuNiJF!5e0!3m2!1sen!2sin!4v1722100567741!5m2!1sen!2sin"
                   allowfullscreen=""
                   className="map-iframe mb-20"
                   loading="lazy"
@@ -133,7 +133,7 @@ export const projectList = [
           title: "Project Location",
           details: `
             <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30744.159126575225!2d73.92690091425048!3d15.590586091360644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf966fcc6c3167%3A0x1d63cb9fcf98a43!2sDicholi%2C%20Goa!5e0!3m2!1sen!2sin!4v1719499303391!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3843.0451948775094!2d73.95050407512585!3d15.589233985022897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDM1JzIxLjIiTiA3M8KwNTcnMTEuMSJF!5e0!3m2!1sen!2sin!4v1722100717574!5m2!1sen!2sin"
                   allowfullscreen=""
                   className="map-iframe mb-20"
                   loading="lazy"

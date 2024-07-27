@@ -53,16 +53,19 @@ function Footer() {
                 href="#"
                 className="fa-brands fa-facebook-f fs-6 me-10 social-media-links"
                 title="facebook"
+                target="_blank"
               ></a>
               <a
                 href="#"
                 className="fa-brands fa-linkedin-in fs-6 me-10 social-media-links"
                 title="linkedIn"
+                target="_blank"
               ></a>
               <a
-                href="#"
+                href="https://www.instagram.com/sawantbuildersgoa/?igsh=MW9mbmpqY2x5MWl1NA%3D%3D&utm_source=qr"
                 className="fa-brands fa-instagram fs-6 social-media-links"
                 title="instagram"
+                target="_blank"
               ></a>
             </div>
           </div>
