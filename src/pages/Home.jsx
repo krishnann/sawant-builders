@@ -182,11 +182,11 @@ const Home = ({ projects }) => {
                     <div className="flex-grow-1 ms-10 ms-lg-5 ms-xl-10">
                       <p className="mb-5 text-nowrap">
                         <strong>M: </strong>
-                        +91 <a href="tel:+91 9823016310" className="mobile-link link">9823016310</a> / <a href="tel:+91 9823016310" className="mobile-link link">9284923037</a>
+                        +91 <a href="tel:+919823016310" className="mobile-link link">9823016310</a> / <a href="tel:+91 9823016310" className="mobile-link link">9284923037</a>
                       </p>
                       <p className="mb-5 text-nowrap">
                         <strong>T: </strong>
-                        +91 <a href="tel:+91 9823016310" className="mobile-link link">832-2910310</a>
+                        +91 <a href="tel:+919823016310" className="mobile-link link">832-2910310</a>
                       </p>
                       <p className="mb-0 text-nowrap">
                         <strong>E: </strong>
@@ -209,8 +209,8 @@ const Home = ({ projects }) => {
                     <div className="flex-shrink-0 media-img visiting-open-icon"></div>
                     <div className="flex-grow-1 ms-10 ms-lg-5 ms-xl-10">
                       <p className="mb-0">
-                        Monday To Friday <br />
-                        9:00am To 5:00pm
+                        Monday To Saturday <br />
+                        9:00am To 5:30pm
                       </p>
                     </div>
                   </div>

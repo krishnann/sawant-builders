@@ -1,4 +1,5 @@
 import React from "react";
+import NavLinks from "./NavLinks";
 
 function Footer() {
   return (
@@ -14,16 +15,16 @@ function Footer() {
           </div>
           <div className="col col-md-5">
             <h5>Address</h5>
-            <p className="mb-5">
-              Sawant Builders Pvt. Ltd. <br />
-              123 Main Street, Cityville, Stateville 56789, Country
-            </p>
-            <p className="mb-5">
-              <strong>Contact No:</strong> +0832-2957755
+            <p className="mb-15">
+              Sawant Builders<br />
+              TF-8, 3rd Floor, MAPUSA HEIGHTS, <br/>Near Judicial Court, Alto Mapusa, Bardez, Goa. 403507
             </p>
             <p className="mb-15">
+              <strong>Contact No:</strong> +0832-2957755
+            </p>
+            <p className="mb-0">
               <strong>Email:</strong>{" "}
-              <a href="mailto:sawantbuilders@gmail.com">
+              <a href="mailto:sawantbuilders@gmail.com" className="link-secondary">
                 sawantbuilders@gmail.com
               </a>
             </p>
@@ -31,20 +32,7 @@ function Footer() {
 
           <div className="col col-md-2">
             <h5>Quick Links</h5>
-            <ul className="list-unstyled">
-              <li className="mb-5">
-                <a href="#">Home</a>
-              </li>
-              <li className="mb-5">
-                <a href="#">Project</a>
-              </li>
-              <li className="mb-5">
-                <a href="#">About Us</a>
-              </li>
-              <li className="mb-5">
-                <a href="#">Contact Us</a>
-              </li>
-            </ul>
+            <NavLinks/>
           </div>
           <div className="col col-md-3">
             <h5>Social Media</h5>
@@ -55,12 +43,12 @@ function Footer() {
                 title="facebook"
                 target="_blank"
               ></a>
-              <a
+              {/* <a
                 href="#"
                 className="fa-brands fa-linkedin-in fs-6 me-10 social-media-links"
                 title="linkedIn"
                 target="_blank"
-              ></a>
+              ></a> */}
               <a
                 href="https://www.instagram.com/sawantbuildersgoa/?igsh=MW9mbmpqY2x5MWl1NA%3D%3D&utm_source=qr"
                 className="fa-brands fa-instagram fs-6 social-media-links"

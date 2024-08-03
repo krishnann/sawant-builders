@@ -76,16 +76,16 @@
     height: 100%;
     margin: auto;
     max-width: 500px;
+    cursor: unset;
 
     &-body {
-      display: flex;
-      align-items: center;
-      // @include media-breakpoint-up(lg){
-      padding: 10px;
-    // }
-    @include media-breakpoint-up(xl){
-      padding: 15px;
-    }
-    }
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    
+        @include media-breakpoint-up(xl) {
+          padding: 15px;
+        }
+      }
   }
 }

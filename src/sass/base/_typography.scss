@@ -35,13 +35,3 @@ h1,
 p{
   color: $gray-100;
 }
-
-a.link {
-  text-decoration: none;
-  color: $brand-primary;
-  &:hover {
-    color: $brand-secondary;
-  }
-}
-
-

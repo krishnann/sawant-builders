@@ -10,7 +10,7 @@ export const projectList = [
       projectDetailsList: [
         {
           title: "Project Introduction",
-          details: `<p><strong>'Sawant Residency'</strong> a Project by <strong>'SAWANT BUILDERS'</strong> a firm with its proprietory having more than 34 years experience in the Real Estate industry. Sawant Residency offers Luxurious, modern, affordable quality homes at a prime location with proximity to all the amenities like school, hospital, market, parks within a radius of 2km.</p>
+          details: `<p><strong>'Sawant Residency'</strong> a Project by <strong>'SAWANT BUILDERS'</strong> a firm with its proprietor having more than 34 years experience in the Real Estate industry. Sawant Residency offers Luxurious, modern, affordable quality homes at a prime location with proximity to all the amenities like school, hospital, market, parks within a radius of 2km.</p>
             <p>Our motto is to provide quality homes, with afforbale prices and timely delivery</p>
             `,
         },
@@ -36,7 +36,7 @@ export const projectList = [
           <li>Designer tiles for bathrooms, Pastel shades sanitaryware</li>
           <li>Hot/cold Provision</li>
           <li>Kitchen platform with Stainless Steel Sink and Granite top</li>
-          <li>Teak Wood pannelled main door with brass fittings, other dooes to be of teak wood frame with marine ply panel/moulded doors/windows/sliding Alluminium/UPVC</li>
+          <li>Teak Wood pannelled main door with brass fittings, other dooes to be of teak wood frame with marine ply panel/moulded doors/windows/sliding Aluminium/UPVC</li>
           <li>Concealed electrical conduits with necessary lug/power/AC points & modular switches</li>
           <li>Cable T.V provision</li>
           <li>Interiors with acrylic distemper & Exteriors with weather protective Paints</li>
@@ -57,14 +57,13 @@ export const projectList = [
                 ></iframe>
   
                    <h5 class="text-decoration-underline fs-6">Address</h5>
-                          <p className="mb-25">TF-8, 3rd Floor, MAPUSA HEIGHTS,
-                          Near Judicial Court, Alto Mapusa, 
-                          Bardez, Goa. 403507</p>
+                          <p className="mb-25">Near ITI Bordem <span class="text-nowrap">Bicholim-Goa</span></p>
   
                           <h5 class="text-decoration-underline fs-6">Contact Details</h5>
-                          <p><strong>Mobile:</strong> +91 9823016310 / 9284923037</p>
-                          <p><strong>Telephone:</strong> +91 832 2910310</p>
-                          <p className="mb-0"><strong>Email:</strong> sawantbuildersgoa@gmail.com</p>
+                          <p><strong>Mobile:</strong> +91 <a href="tel:+919823016310" class="mobile-link link">9823016310</a> / <a href="tel:+91 9823016310" class="mobile-link link">9284923037</a></p>
+                          <p><strong>Telephone:</strong> <a href="tel:+919823016310" class="mobile-link link">9284923037</a></p>
+                          <p className="mb-0"><strong>Email:</strong> <a href="mailto:sawantbuildersgoa@gmail.com" className="link">
+                          sawantbuildersgoa@gmail.com</a></p>
                           
           `,
         },
@@ -111,15 +110,15 @@ export const projectList = [
           </ul>
           </div> 
           <div className="col col-md-8">
-           <h5 className="text-primary">Specifications</h5>
-           <ul className="list">
+          <h5 className="text-primary">Specifications</h5>
+          <ul className="list">
           <li>R.C.C Framed structure</li>
           <li>Vitrified flooring</li>
           <li>Granite / Marble skills</li>
           <li>Designer tiles for bathrooms, Pastel shades sanitaryware</li>
           <li>Hot/cold Provision</li>
           <li>Kitchen platform with Stainless Steel Sink and Granite top</li>
-          <li>Teak Wood pannelled main door with brass fittings, other dooes to be of teak wood frame with marine ply panel/moulded doors/windows/sliding Alluminium/UPVC</li>
+          <li>Teak Wood pannelled main door with brass fittings, other dooes to be of teak wood frame with marine ply panel/moulded doors/windows/sliding Aluminium/UPVC</li>
           <li>Concealed electrical conduits with necessary lug/power/AC points & modular switches</li>
           <li>Cable T.V provision</li>
           <li>Interiors with acrylic distemper & Exteriors with weather protective Paints</li>
@@ -138,16 +137,14 @@ export const projectList = [
                   className="map-iframe mb-20"
                   loading="lazy"
                 ></iframe>
-  
-                   <h5 class="text-decoration-underline fs-6">Address</h5>
-                          <p className="mb-25">TF-8, 3rd Floor, MAPUSA HEIGHTS,
-                          Near Judicial Court, Alto Mapusa, 
-                          Bardez, Goa. 403507</p>
+                      <h5 class="text-decoration-underline fs-6">Address</h5>
+                          <p className="mb-25">Vasudev Nagar, <span class="text-nowrap">Bicholim-Goa</span></p>
   
                           <h5 class="text-decoration-underline fs-6">Contact Details</h5>
-                          <p><strong>Mobile:</strong> +91 9823016310 / 9284923037</p>
-                          <p><strong>Telephone:</strong> +91 832 2910310</p>
-                          <p className="mb-0"><strong>Email:</strong> sawantbuildersgoa@gmail.com</p>
+                          <p><strong>Mobile:</strong> +91 <a href="tel:+919823016310" class="mobile-link link">9823016310</a> / <a href="tel:+91 9823016310" class="mobile-link link">9284923037</a></p>
+                          <p><strong>Telephone:</strong> <a href="tel:+919823016310" class="mobile-link link">9284923037</a></p>
+                          <p className="mb-0"><strong>Email:</strong> <a href="mailto:sawantbuildersgoa@gmail.com" className="link">
+                          sawantbuildersgoa@gmail.com</a></p>
                           
           `,
         },

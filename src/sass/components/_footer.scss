@@ -1,5 +1,5 @@
 footer {
-  color: $black;
+  color:$gray-100;
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -17,8 +17,12 @@ footer {
 
   .nav-item {
     .nav-link {
-      @extend .link;
+      padding: 5px 0;
       margin-right: 20px;
+      @extend .link-secondary;
+      &:hover{
+        color: $black;
+      }
     }
 
     &:last-child {

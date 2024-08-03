@@ -16,6 +16,7 @@
 
 .custom-scrollbar, .custom-scrollbar-primary{
   &::-webkit-scrollbar {
+
     width: 10px; /* Width of the scrollbar */
   }
 }
@@ -24,10 +25,10 @@
   background-color: #333; /* Color of the scrollbar thumb */
 }
 
-a.social-media-links {
+.social-media-links {
   border: 1px solid $brand-primary;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,6 +39,24 @@ a.social-media-links {
   &:hover{
     color: $brand-secondary;
     border: 1px solid $brand-secondary;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $brand-primary;
+
+  transition: 1s;
+  &-secondary{
+    color: $gray-100 !important;
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+
+  &:hover {
+    color: $brand-secondary;
   }
 }
 
