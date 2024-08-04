@@ -40,4 +40,12 @@ footer {
       align-items: center;
       background-color: $brand-secondary;
   }
+
+    .footer-nav-links .nav-item {
+      padding: 5px 0 !important;
+
+      .nav-link{
+        padding: 0;
+      }
+    }
 }

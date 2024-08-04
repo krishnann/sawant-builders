@@ -11,7 +11,7 @@ export const projectList = [
         {
           title: "Project Introduction",
           details: `<p><strong>'Sawant Residency'</strong> a Project by <strong>'SAWANT BUILDERS'</strong> a firm with its proprietor having more than 34 years experience in the Real Estate industry. Sawant Residency offers Luxurious, modern, affordable quality homes at a prime location with proximity to all the amenities like school, hospital, market, parks within a radius of 2km.</p>
-            <p>Our motto is to provide quality homes, with afforbale prices and timely delivery</p>
+            <p>Our motto is to provide quality homes, with affordable prices and timely delivery</p>
             `,
         },
         {
@@ -36,8 +36,8 @@ export const projectList = [
           <li>Designer tiles for bathrooms, Pastel shades sanitaryware</li>
           <li>Hot/cold Provision</li>
           <li>Kitchen platform with Stainless Steel Sink and Granite top</li>
-          <li>Teak Wood pannelled main door with brass fittings, other dooes to be of teak wood frame with marine ply panel/moulded doors/windows/sliding Aluminium/UPVC</li>
-          <li>Concealed electrical conduits with necessary lug/power/AC points & modular switches</li>
+          <li>Teak Wood pannelled main door with brass fittings, other doors to be of teak wood frame with marine ply panel/moulded doors/windows/sliding Aluminium/UPVC</li>
+          <li>Concealed electrical conduits with necessary plug/power/AC points & modular switches</li>
           <li>Cable T.V provision</li>
           <li>Interiors with acrylic distemper & Exteriors with weather protective Paints</li>
           <li>CPVC Rust-free plumbing</li>
@@ -61,7 +61,7 @@ export const projectList = [
   
                           <h5 class="text-decoration-underline fs-6">Contact Details</h5>
                           <p><strong>Mobile:</strong> +91 <a href="tel:+919823016310" class="mobile-link link">9823016310</a> / <a href="tel:+91 9823016310" class="mobile-link link">9284923037</a></p>
-                          <p><strong>Telephone:</strong> <a href="tel:+919823016310" class="mobile-link link">9284923037</a></p>
+                          <p><strong>Telephone:</strong> +91 <a href="tel:+919823016310" className="mobile-link link">832-2910310</a></p>
                           <p className="mb-0"><strong>Email:</strong> <a href="mailto:sawantbuildersgoa@gmail.com" className="link">
                           sawantbuildersgoa@gmail.com</a></p>
                           
@@ -93,7 +93,7 @@ export const projectList = [
       projectDetailsList: [
         {
           title: "Project Introduction",
-          details: `<p><strong>'Sawant Vihar'</strong> a Project by <strong>'SAWANT BUILDERS'</strong> offers '6' apartments with lift and individual stilted parking in a gated building complex. The project is located within walking distance from the market, bustand and all other amenities like schools hospital etc yet located in a quite and serene locality.</p>
+          details: `<p><strong>'Sawant Vihar'</strong> a Project by <strong>'SAWANT BUILDERS'</strong> offers '6' apartments with lift and individual stilted parking in a gated building complex. The project is located within walking distance from the market, bustand and all other amenities like schools, hospital etc. yet located in a quite and serene locality.</p>
             `,
         },
         {
@@ -118,8 +118,8 @@ export const projectList = [
           <li>Designer tiles for bathrooms, Pastel shades sanitaryware</li>
           <li>Hot/cold Provision</li>
           <li>Kitchen platform with Stainless Steel Sink and Granite top</li>
-          <li>Teak Wood pannelled main door with brass fittings, other dooes to be of teak wood frame with marine ply panel/moulded doors/windows/sliding Aluminium/UPVC</li>
-          <li>Concealed electrical conduits with necessary lug/power/AC points & modular switches</li>
+          <li>Teak Wood pannelled main door with brass fittings, other doors to be of teak wood frame with marine ply panel/moulded doors/windows/sliding Aluminium/UPVC</li>
+          <li>Concealed electrical conduits with necessary plug/power/AC points & modular switches</li>
           <li>Cable T.V provision</li>
           <li>Interiors with acrylic distemper & Exteriors with weather protective Paints</li>
           <li>CPVC Rust-free plumbing</li>
@@ -142,7 +142,7 @@ export const projectList = [
   
                           <h5 class="text-decoration-underline fs-6">Contact Details</h5>
                           <p><strong>Mobile:</strong> +91 <a href="tel:+919823016310" class="mobile-link link">9823016310</a> / <a href="tel:+91 9823016310" class="mobile-link link">9284923037</a></p>
-                          <p><strong>Telephone:</strong> <a href="tel:+919823016310" class="mobile-link link">9284923037</a></p>
+                          <p><strong>Telephone:</strong> +91 <a href="tel:+919823016310" className="mobile-link link">832-2910310</a></p>
                           <p className="mb-0"><strong>Email:</strong> <a href="mailto:sawantbuildersgoa@gmail.com" className="link">
                           sawantbuildersgoa@gmail.com</a></p>
                           

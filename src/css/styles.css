@@ -2114,6 +2114,12 @@ footer .copyright-content {
   align-items: center;
   background-color: #c73c29;
 }
+footer .footer-nav-links .nav-item {
+  padding: 5px 0 !important;
+}
+footer .footer-nav-links .nav-item .nav-link {
+  padding: 0;
+}
 
 .btn {
   border-radius: 4px;
