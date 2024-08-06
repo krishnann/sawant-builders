@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { useForm } from "react-hook-form";
 import ReactHtmlParser from "html-react-parser";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 const Home = ({ projects }) => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -12,33 +13,39 @@ const Home = ({ projects }) => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data); // You can handle form data submission here
-    const config = {
-      SecureToken: "2AD84815AD9C38CB812AFE947CF28D2CF4FF",
-      Port: 2525,
-      To: "testmailkd@yopmail.com",
-      From: "knaik0901@gmail.com",
-      Subject: "Guest is interested in project",
-      Body: "And this is the body",
-    };
-
-    if (window.Email) {
-      window.Email.send(config)
-        .then((message) => {
-          if (message === "OK") {
-            setIsFormSubmitted(true); // Update state or perform other actions
-          } else {
-            alert("Failed to submit: " + message); // Show error message
-          }
-        })
-        .catch((error) => {
-          console.error("Error sending email:", error); // Log any errors
-          alert("Failed to submit: " + error); // Show error message
-        });
-    } else {
-      alert("SMTPJS library not loaded."); // Handle case where SMTPJS is not loaded
+  const onSubmit = async(data) => {
+    try {
+      await axios.post('/api/contact', data);
+      setStatus('Message sent successfully!');
+      reset(); // Clear the form
+    } catch (error) {
+      setStatus('Failed to send message. Please try again later.');
     }
+    // const config = {
+    //   SecureToken: "2AD84815AD9C38CB812AFE947CF28D2CF4FF",
+    //   Port: 2525,
+    //   To: "testmailkd@yopmail.com",
+    //   From: "knaik0901@gmail.com",
+    //   Subject: "Guest is interested in project",
+    //   Body: "And this is the body",
+    // };
+
+    // if (window.Email) {
+    //   window.Email.send(config)
+    //     .then((message) => {
+    //       if (message === "OK") {
+    //         setIsFormSubmitted(true); // Update state or perform other actions
+    //       } else {
+    //         alert("Failed to submit: " + message); // Show error message
+    //       }
+    //     })
+    //     .catch((error) => {
+    //       console.error("Error sending email:", error); // Log any errors
+    //       alert("Failed to submit: " + error); // Show error message
+    //     });
+    // } else {
+    //   alert("SMTPJS library not loaded."); // Handle case where SMTPJS is not loaded
+    // }
   };
 
   var settings = {

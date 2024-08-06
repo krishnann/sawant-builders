@@ -1,7 +1,7 @@
 import React from "react";
 import NavLinks from "./NavLinks";
 
-function Footer() {
+function Footer({ handleClick, navItemsList }) {
   return (
     <footer id="footer">
       <div className="container mb-15 pt-5">
@@ -40,7 +40,7 @@ function Footer() {
 
           <div className="col col-md-3 col-lg-2 footer-nav-links mb-15 mb-md-0">
             <h5>Quick Links</h5>
-            <NavLinks/>
+            <NavLinks handleNavClick={handleClick} navItemsCollection={navItemsList} />
           </div>
           <div className="col col-md-3 col-lg-3 text-md-start">
             <h5>Social Media</h5>

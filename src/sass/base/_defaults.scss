@@ -5,7 +5,8 @@ html {
 
 body {
   line-height: 1.25;
-  @include font-size(14px);
+  letter-spacing: 0.5px;
+  @include font-size(15px);
   // font-family: "Kanit", sans-serif;
   // font-family: "Inter", sans-serif;
   font-family: "Noto Sans", sans-serif;

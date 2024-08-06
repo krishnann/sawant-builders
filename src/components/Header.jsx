@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavLinks from "./NavLinks";
 
-function Header() {
+function Header({ handleClick, navItemsList }) {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   function toggleHamburgerIcon() {
@@ -37,38 +37,8 @@ function Header() {
     setTimeout(function () {
       setMainPadding();
     }, 1);
-    // Wait for the page to fully load before calling setMainPadding
-    // window.addEventListener("load", setMainPadding);
+
     window.addEventListener("resize", setMainPadding);
-
-    // Function to handle smooth scrolling
-    // const smoothScroll = (e) => {
-    //   e.preventDefault();
-
-    //   const targetId = e.currentTarget.getAttribute("href").substring(1); // Remove the '#'
-    //   const targetElement = document.getElementById(targetId);
-
-    //   if (targetElement) {
-    //     const targetTop =
-    //       targetElement.getBoundingClientRect().top + window.pageYOffset - 40;
-    //     window.scrollTo({
-    //       top: targetTop,
-    //       behavior: "smooth",
-    //     });
-    //   }
-    // };
-
-    // // Add event listeners for smooth scrolling
-    // document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    //   anchor.addEventListener("click", smoothScroll);
-    // });
-
-    // // Clean up event listeners on component unmount
-    // return () => {
-    //   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    //     anchor.removeEventListener("click", smoothScroll);
-    //   });
-    // };
   }, []);
 
   return (
@@ -95,7 +65,7 @@ function Header() {
           </div>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <NavLinks toggleNavbar={toggleCollapsibleNavbar} />
+          <NavLinks toggleNavbar={toggleCollapsibleNavbar} handleNavClick={handleClick} navItemsCollection={navItemsList} />
         </div>
       </div>
     </nav>

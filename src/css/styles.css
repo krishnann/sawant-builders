@@ -1661,8 +1661,9 @@ html {
 
 body {
   line-height: 1.25;
-  font-size: 14px;
-  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  font-size: 0.9375rem;
   font-family: "Noto Sans", sans-serif;
 }
 
